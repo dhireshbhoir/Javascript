@@ -1,0 +1,82 @@
+<!--
+*@fileName:author.html
+*@createBy:Dhiresh
+*@date:10/11/16
+*@purpose:digital clock with random articles
+-->
+<!DOCTYPE html>
+<head>
+    <style>
+        div {
+            width: 80px;
+            border: 5px solid #CD853F;
+            paddind: 25px;
+            margin: 25px;
+        }
+
+    </style>
+    <title>Document</title>
+    <script>
+        function digiclock() {
+            var current = new Date(); //create new object
+            var hour = current.getHours();
+            var minute = current.getMinutes();
+            var second = current.getSeconds();
+            document.getElementById("id").innerHTML = hour + ":" + minute + ":" + second;
+
+            setTimeout(digiclock, 1000);
+        }
+        //JSON defines the author object
+        var text = [{
+            "author": "rocky",
+            "date": "10-11-2016",
+            "publication": "tech"
+        }, {
+            "author": "steave",
+            "date": "20-11-2016",
+            "publication": "fort"
+        }, {
+            "author": "tom",
+            "date": "30-11-2016",
+            "publication": "savan"
+        }, {
+            "author": "jay",
+            "date": "10-12-2016",
+            "publication": "max"
+        }];
+
+        function myFunction() {
+
+            //round a number downward to its nearest integer.
+            var i = Math.floor(Math.random() * text.length);
+            if (i <= text.length) {
+                document.getElementById("author").innerHTML = text[i].author;
+                document.getElementById("date").innerHTML = text[i].date;
+                document.getElementById("publication").innerHTML = text[i].publication;
+                // Display after 5 sec
+                setTimeout(myFunction, 5000);
+            }
+        }
+    </script>
+</head>
+<!--execute once a web page loaded-->
+<body bgcolor ="white" onload="digiclock(); myFunction();">
+        <div id="id"></div>
+            <table>
+                <tr>
+                    <td>author      :</td>
+                    <td id="author"></td>
+                </tr>
+                <tr>
+                    <td>date        :</td>
+                    <td id="date"></td>
+                </tr>
+                <tr>
+                    <td>publication :</td>
+                    <td id="publication"></td>
+                </tr>
+            </table>
+    </div>
+</body>
+
+</html>

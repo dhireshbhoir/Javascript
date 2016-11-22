@@ -1,0 +1,35 @@
+<!--
+*@fileName:Chaining.html
+*@createBy:Dhiresh
+*@date:14/11/16
+*@purpose:Make a Calculation object which will have 3 functions first(),second() and sum().
+-->
+<html>
+<head>
+    <title>Chaining</title>
+    <script>
+       var cal =function() {
+           this.n1=0;
+           this.n2=0;
+       }
+       cal.prototype.first=function(n1) { //object.prototype
+           this.n1=n1;
+       }
+       cal.prototype.second=function(n2) { // object inherit properties & methods from prototype
+           this.n2=n2;
+       }
+       cal.prototype.total=function() {
+           var total=this.n1+this.n2;
+           console.log("total is "+ total);
+	   document.write("total is "+ total);	
+       }
+       var data=new cal(); // creating a new object
+            data.first(10);
+            data.second(20);
+            data.total();  
+</script>
+</head>
+<body>
+    
+</body>
+</html>

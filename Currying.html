@@ -1,0 +1,55 @@
+<!--
+*@fileName:Currying.html
+*@createBy:Dhiresh
+*@date:14/11/16
+*@Purpose:calculate arithmetic operations using currying method
+-->
+
+
+<html>
+<head>
+  <title>Currying</title>
+  <script>
+  //function with multiple arity into the same function
+  //adding two numbers using currying method
+  var addition=function(a){ //passing an argument
+    return function(b){ // return{function}
+      return a+b; //return number
+    }
+  }
+  //subtraction of two numbers using currying method
+  var subtraction=function(a){
+    return function(b){
+      return a-b;
+    }
+  }
+  //multiplication of two numbers using currying method
+  var multiplication=function(a){
+    return function(b){
+      return a*b;
+    }
+  }
+  //division of  two numbers using currying method
+  var division=function(a){
+    return function(b){
+      return a/b;
+    }
+  }
+  var add = addition(10);//binding argument to the first function
+  var add1 = add(5);//first value is fixed for the next invocation
+  document.write("addition of two numbers: " + add1 + "<br>");
+  var sub = subtraction(10);
+  var sub1=sub(5);
+  document.write("subtraction of two numbers: "+sub1+"<br>");
+  var mul = multiplication(10);
+  var mul1 = mul(5);
+  document.write("multiplication of two numbers: " + mul1 + "<br>");
+  var div = division(10);
+  var div1 = div(5);
+  document.write("division of two numbers: " + div1 + "<br>");
+  </script>
+</head>
+<body>
+
+</body>
+</html>

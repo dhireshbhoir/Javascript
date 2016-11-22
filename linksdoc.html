@@ -1,0 +1,37 @@
+<!--
+*@fileName:linksdoc.html
+*@createBy:Dhiresh
+*@date:15/11/16
+*@Purpose:counting number of links in document
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<script>
+function myFunction() {
+
+   var anchorLength=document.links.length;
+   document.getElementById("demo").innerHTML='linkscount is'+" "+anchorLength;//displaying no of links
+  var array;
+   for(var i=0;i<=anchorLength;i++){
+          alert("link"+(i+1)+"->"+document.links[i].href);//displaying each link in alert box
+
+	}
+}
+</script>
+
+</head>
+<body>
+
+    <p>Click the button to display the number of links in the document.</p><br>
+    <a href="http://www.w3schools.com/asp/asp_examples.asp">w3schools</a><br>
+    <a href="http://www.facebook.com">facebook</a><br>
+    <a href="https://www.google.com">google</a><br>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo" </p>
+</body>
+
+</html>

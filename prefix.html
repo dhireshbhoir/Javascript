@@ -1,0 +1,25 @@
+<!--
+*@fileName:prefix.html
+*@createBy:Dhiresh Bhoir
+*@date:11/11/16
+*@purpose:Add prefix before word
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prefix</title>
+<script>
+function myFunction() {
+var str="BridgeLabz";
+ for(var i=0; i<arguments.length; i++) {
+   str=str+" "+arguments[i];
+  }
+  document.getElementById("id").innerHTML = str;
+}
+</script>
+</head>
+<body>
+    <button type = "button" onclick="myFunction('Cat', 'Alice');">show</button>    
+<p  id="id"></p>
+</body>
+</html>

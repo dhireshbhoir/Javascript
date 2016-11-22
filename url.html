@@ -1,0 +1,28 @@
+<!--
+*@fileName:url.html
+*@createBy:Dhiresh
+*@date:14/11/16
+*@Purpose:parts of url
+-->
+
+<html>
+<head>
+    <title>Parts of url</title>
+</head>
+<body>
+</body>
+<script>
+
+    var newURL = window.location.protocol + "://" + window.location.host + "/" + window.location.pathname;
+    document.write("newURL: "+newURL+"<br>");
+  
+    var protocol=window.location.protocol; //returns the protocol of the current page
+    document.write("protocol is: "+protocol+"<br>");
+   
+    var host=window.location.host; //returns the host of the current page
+    document.write("host: "+host+"<br>");
+    
+    var pathname=window.location.pathname; // returns the pathname of the current page
+    document.write("pathname: "+pathname+"<br>");
+</script>
+</html>

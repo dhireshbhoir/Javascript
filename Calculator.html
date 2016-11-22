@@ -1,0 +1,35 @@
+<!--
+*@fileName:Calculator.html
+*@createBy:Dhiresh
+*@date:10/11/16
+*@purpose:Perform arithmetic operations
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+body {
+    background-color: cyan;
+}
+</style>
+</head>
+<body>
+  <p>Calculator</p>
+  <!-- Here user will enter 1st number. -->
+  first number : <input type ="number" id="firstno"><br/>
+  <!-- Here user will enter 2nd number. -->
+  second number : <input type ="number" id="secondno"><br/>
+  select operation : <select id="sel" value="select">
+                        <option value="select">select</option>
+                        <option onclick="add()">add</option>          <!-- Addition -->
+                        <option onclick="sub()">substract</option>    <!-- Subtraction -->
+                        <option onclick="mul()">multiply</option>     <!-- Multiplication -->
+                        <option onclick="div()">division</option>     <!-- Division -->
+                     </select>
+    <input type="button" id="bt" onclick="calculate()" value="calculate"><br>
+   <!-- Here result will be displayed. -->
+  result : <input type="text" id="result" ><br/>
+<script src="/home/bridgeit/Documents/Dhiresh/Javascript/Calculator.js"></script>
+</body>
+</html>

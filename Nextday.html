@@ -1,0 +1,32 @@
+<!--
+*@fileName:Nextday.html
+*@createBy:Dhiresh
+*@date:11/11/16
+*@purpose:Displaying next day
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Next day</title>
+<script>
+function nextday(){
+	var daynames= new Array('sunday', 'monday', 'Tuesday', 'Wednesday', 'Thursday',
+                'Friday', 'Saturday'); //declare variable name
+        var current = new Date(); //initialize date object
+        Date.prototype.getUTCDayName = function() {
+            return daynames[this.getUTCDay()];
+        };
+        Date.prototype.getNextDay = function() {
+            return daynames[this.getUTCDay() + 1]; //returns nextday
+        };
+        document.getElementById("today").innerHTML = "Today is "+ current.getUTCDayName().toString();
+        document.getElementById("tomorrow").innerHTML = "Tomorrow is "+ current.getNextDay().toString();
+}
+</script>
+</head>
+<body bgcolor ="white" onload="nextday();">
+	<p id="today"></p>
+	<p id="tomorrow"></p>
+</body>
+</html>
+
