@@ -15,21 +15,21 @@ body {
 </style>
 </head>
 <body>
-  <p>Calculator</p>
-  <!-- Here user will enter 1st number. -->
-  first number : <input type ="number" id="firstno"><br/>
-  <!-- Here user will enter 2nd number. -->
-  second number : <input type ="number" id="secondno"><br/>
-  select operation : <select id="sel" value="select">
-                        <option value="select">select</option>
-                        <option onclick="add()">add</option>          <!-- Addition -->
-                        <option onclick="sub()">substract</option>    <!-- Subtraction -->
-                        <option onclick="mul()">multiply</option>     <!-- Multiplication -->
-                        <option onclick="div()">division</option>     <!-- Division -->
-                     </select>
-    <input type="button" id="bt" onclick="calculate()" value="calculate"><br>
-   <!-- Here result will be displayed. -->
-  result : <input type="text" id="result" ><br/>
+    <form name="cal">
+       first num:<input type="text" name="num1"/><br/>
+       second num:<input type="text" name="num2"/><br/>
+
+select operation:
+<select name="-select-" onchange="calculate(this.value)"> 
+    
+            <option> -select- </option>
+                    <option value="add">addition</option>
+                    <option value="sub">subtraction</option>
+                    <option value="mul">multiplication</option>
+                    <option value="div">division</option>
+        </select> 
+             <input type="text"  name="res"></input>
+    </form>
 <script src="/home/bridgeit/Documents/Dhiresh/Javascript/Calculator.js"></script>
 </body>
 </html>

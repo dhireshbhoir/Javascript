@@ -1,28 +1,19 @@
-var num3;
-function add(){
-  num1 = document.getElementById("firstno").value;
-  num2 = document.getElementById("secondno").value;
-  num3 = parseInt(num1) + parseInt(num2);
-  
-}
-function sub(){
-  num1 = document.getElementById("firstno").value;
-  num2 = document.getElementById("secondno").value;
-  num3 = parseInt(num1) - parseInt(num2);
-  
-}
-function mul(){
-  num1 = document.getElementById("firstno").value;
-  num2 = document.getElementById("secondno").value;
-  num3 = parseInt(num1) * parseInt(num2);
-  
-}
-function div(){
-  num1 = document.getElementById("firstno").value;
-  num2 = document.getElementById("secondno").value;
-  num3 = parseInt(num1) / parseInt(num2);
- 
-}
-function calculate(){
-  document.getElementById("result").value=num3;
-}
+function calculate(oper) {
+                var a=Number(document.cal.num1.value);
+                var b=Number(document.cal.num2.value);
+            switch(oper) {   //switch case statement
+                case "add":
+                var c=a+b;
+                break;
+                case "sub":
+                var c=a-b;
+                break;
+                case "mul":
+                var c=a*b;
+                break;
+                case "div":
+                var c=a/b;
+                break;
+            }
+            document.cal.res.value=c;
+        }
